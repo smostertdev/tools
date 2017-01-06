@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="Convert a table to database insert statements." name="description">
+	<meta content="Insert statements, table, database, convert" name="keywords">
+	<meta content="Sylvan Mostert" name="author">
+
+	<title>Insert Statement Generator</title>
+
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery-1.12.3.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Clusterize.js -->
+	<link href="../css/clusterize.css" rel="stylesheet">
+	<script src="../js/clusterize.min.js"></script>
+
+	<link href="../css/global.css" rel="stylesheet">
+	<link href="insert-style.css" rel="stylesheet">
+	<script src="insert-script.js"></script>
+
+
+	<link href="/favicon.ico" rel="icon">
+</head>
+
+<body>
+	<header>
+		<h1>JTextTools</h1>
+
+			<nav data-spy="affix" data-offset-top="197">
+				<div class="container menu-container">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="/about/">About</a></li>
+						<li><a href="/blog/">Blog</a></li>
+					</ul>
+				</div>
+			</nav>
+
+	</header>
+
+	<div class="container">
+		<h2>Insert Statement Generator</h2>
+	</div>
+
+	<div class="container">
+
+		<div class="panel with-nav-tabs panel-default">
+			<div class="panel-heading insert-tabs">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#1" data-toggle="tab"><span class="glyphicon glyphicon-paste">&nbsp;</span>Paste Text</a></li>
+					<li><a href="#2" data-toggle="tab" id="view-table"><span class="glyphicon glyphicon-list-alt">&nbsp;</span>View Table</a></li>
+					<li class="pull-right"><a href="#3" data-toggle="tab"><span class="glyphicon glyphicon-cog">&nbsp;</span>Settings</a></li>
+				</ul>
+			</div>
+
+			<div class="panel-body insert-body">
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="1">
+						<form action="#2">
+
+							<fieldset class="form-group">
+								<label for="tablename">Table Name</label> <input class="form-control" id="tablename" placeholder="Enter table name" type="text">
+							</fieldset>
+							<fieldset class="form-group">
+								<label for="table">Table</label>
+								<textarea class="form-control" id="table" rows="10"></textarea>
+							</fieldset>
+							<div class="pull-right">
+								<button class="btn" type="reset">Clear</button> <button class="btn btn-primary" onclick="generate()" type="submit">Verify Input</button>
+							</div>
+						</form>
+					</div>
+
+					<div class="tab-pane fade" id="2">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<p class="table-instructions"><span class="glyphicon glyphicon-arrow-up">&nbsp;</span>Please paste copy and paste a table into the first tab.</p>
+
+								<div class="clusterize">
+									<div id="scrollArea" class="clusterize-scroll">
+
+										<table>
+											<thead>
+												<tr>
+													<th>Headers</th>
+												</tr>
+											</thead>
+											<tbody id="contentArea" class="clusterize-content">
+												<tr class="clusterize-no-data">
+													<td>Loading data... Please make sure JavaScript is enabled.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="3">Default 2</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>
