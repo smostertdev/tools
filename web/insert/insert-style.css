@@ -1,0 +1,49 @@
+html {
+	overflow-y: scroll;
+}
+
+.insert-tabs {
+	padding-bottom: 0px;
+}
+
+.insert-tabs > .nav-tabs {
+	border-bottom: none;
+}
+
+.insert-tabs > .nav-tabs li.active a {
+	background-color: #C8D0C9;
+	color: #000000;
+	font-weight: 700;
+}
+
+.insert-tabs > .nav-tabs li a {
+	color: #000000;
+	font-weight: 700;
+}
+
+.insert-body {
+	background-color: #C8D0C9;
+	color: #000000;
+}
+
+
+#table-instructions {
+	margin: 0px;
+}
+
+.hide {
+	display: none;
+}
+
+.clusterize table {
+	width: 100%;
+}
+
+.clusterize table thead tr th {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+.clusterize table tbody tr td {
+	border-bottom: solid 1px #000000;
+}
