@@ -6,6 +6,11 @@ header h1 {
 	color: #FFFFFF;
 }
 
+.menu-title {
+	background-color: #342A21;
+	padding: 10px 0px;
+}
+
 header nav {
 	background-color: #71816D;
 	height: 50px;

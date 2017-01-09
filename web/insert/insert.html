@@ -19,6 +19,9 @@
 	<link href="../css/clusterize.css" rel="stylesheet">
 	<script src="../js/clusterize.min.js"></script>
 
+	<!-- Autoresize.js -->
+	<script src="../js/jquery.ns-autogrow.min.js"></script>
+
 	<link href="../css/global.css" rel="stylesheet">
 	<link href="insert-style.css" rel="stylesheet">
 	<script src="insert-script.js"></script>
@@ -29,31 +32,31 @@
 
 <body>
 	<header>
-		<h1>JTextTools</h1>
+		<div class="menu-title">
+			<h1 class="container">JTextTools</h1>
+		</div>
 
-			<nav data-spy="affix" data-offset-top="197">
-				<div class="container menu-container">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="/about/">About</a></li>
-						<li><a href="/blog/">Blog</a></li>
-					</ul>
-				</div>
-			</nav>
+		<nav>
+			<div class="container menu-container">
+
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="/about/">About</a></li>
+					<li><a href="/blog/">Blog</a></li>
+				</ul>
+			</div>
+		</nav>
 
 	</header>
 
 	<div class="container">
 		<h2>Insert Statement Generator</h2>
-	</div>
-
-	<div class="container">
 
 		<div class="panel with-nav-tabs panel-default">
 			<div class="panel-heading insert-tabs">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#1" data-toggle="tab"><span class="glyphicon glyphicon-paste">&nbsp;</span>Paste Text</a></li>
-					<li><a href="#2" data-toggle="tab" id="view-table"><span class="glyphicon glyphicon-list-alt">&nbsp;</span>View Table</a></li>
+					<li class="active"><a href="#1" data-toggle="tab"><span class="glyphicon glyphicon-paste">&nbsp;</span>Input</a></li>
+					<li><a href="#2" data-toggle="tab" id="view-table"><span class="glyphicon glyphicon-list-alt">&nbsp;</span>Table</a></li>
 					<li class="pull-right"><a href="#3" data-toggle="tab"><span class="glyphicon glyphicon-cog">&nbsp;</span>Settings</a></li>
 				</ul>
 			</div>
@@ -64,11 +67,12 @@
 						<form action="#2">
 
 							<fieldset class="form-group">
-								<label for="tablename">Table Name</label> <input class="form-control" id="tablename" placeholder="Enter table name" type="text">
+								<label for="tablename">Table Name</label>
+								<input class="form-control" id="tablename" placeholder="Enter table name" type="text" autofocus="autofocus">
 							</fieldset>
 							<fieldset class="form-group">
 								<label for="table">Table</label>
-								<textarea class="form-control" id="table" rows="10"></textarea>
+								<textarea class="form-control table-content" id="table"></textarea>
 							</fieldset>
 							<div class="pull-right">
 								<button class="btn" type="reset">Clear</button> <button class="btn btn-primary" onclick="generate()" type="submit">Verify Input</button>
