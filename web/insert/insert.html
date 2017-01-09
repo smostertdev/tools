@@ -67,14 +67,14 @@
 
 							<fieldset class="form-group">
 								<label for="tablename">Table Name</label>
-								<input class="form-control" id="tablename" placeholder="Enter table name" type="text" autofocus="autofocus">
+								<input class="form-control" id="tablename" placeholder="Enter table name" type="text" autofocus="autofocus" required="required">
 							</fieldset>
 							<fieldset class="form-group">
-								<label for="table">Table</label>
-								<textarea class="form-control table-content" id="table"></textarea>
+								<label for="table">Table Rows</label>
+								<textarea class="form-control table-content" id="table" placeholder="Copy and paste spreadsheet data here." required="required"></textarea>
 							</fieldset>
 							<div class="pull-right">
-								<button class="btn" type="reset">Clear</button> <button class="btn btn-primary" onclick="generate()" type="submit">Verify Input</button>
+								<button class="btn" type="reset">Clear</button> <button class="btn btn-primary" onclick="generate()" type="submit">Review Table</button>
 							</div>
 						</form>
 					</div>
