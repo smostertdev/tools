@@ -20,6 +20,8 @@ $(document).delegate('#table', 'keydown', function(e) {
 });
 
 $( document ).ready(function() {
+	$('.jswarning').css('display', 'none');
+
 	$('#view-table').click(function() {
 		var t_name = $('#tablename').val();
 		var t_data = $('#table').val();
